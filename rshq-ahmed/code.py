@@ -6,7 +6,7 @@ from kvsqlite.sync import Client as elhakem
 import random
 db = elhakem("data.sqlite", 'fuck')
 
-@app.on_callback_query(filters.regex("^send_code$"))
+@app.on_callback_query(filters.regex("send_code"))
 async def dailygiftt(app,query):
     user_id = query.from_user.id
     keys = mk(
